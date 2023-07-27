@@ -20,7 +20,7 @@ We used webpack init.
 
 - Run unit test
 
-    ```npx test```
+    ```npm test```
 
 
 ## Documentation
