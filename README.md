@@ -15,7 +15,7 @@ We used webpack init.
 
      ```npm run start``` //for dev
 
-     ```npm run build```  //for prod
+     ```npm run build```  //for prod (IMPORTANT, execute this to create /dist)
 
 
 - Run unit test

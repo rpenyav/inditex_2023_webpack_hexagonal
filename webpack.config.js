@@ -6,7 +6,7 @@ const webpackConfig = {
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    filename: "[name].[contenthash].js",
     publicPath: "/",
   },
   resolve: {
@@ -16,8 +16,7 @@ const webpackConfig = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        exclude: /node_modules\/(?!(react-router-dom)\/).*/,
-
+        exclude: /node_modules/,
         use: "ts-loader",
       },
       {
@@ -57,7 +56,20 @@ const webpackConfig = {
     compress: true,
     port: 3000,
     historyApiFallback: true,
-  }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      minSize: 0,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendor",
+          chunks: "all",
+        },
+      },
+    },
+  },
 };
 
 module.exports = webpackConfig;
