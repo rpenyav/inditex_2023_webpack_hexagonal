@@ -6,7 +6,7 @@ const webpackConfig = {
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    filename: 'bundle.js',
     publicPath: "/",
   },
   resolve: {
