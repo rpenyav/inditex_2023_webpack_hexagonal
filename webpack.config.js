@@ -6,7 +6,7 @@ const webpackConfig = {
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'bundle.js',
+    filename: "[name].js",
     publicPath: "/",
   },
   resolve: {
@@ -57,20 +57,7 @@ const webpackConfig = {
     compress: true,
     port: 3000,
     historyApiFallback: true,
-  },
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-      minSize: 0,
-      cacheGroups: {
-        defaultVendors: {
-          test: /[\\/]node_modules[\\/]/,
-          name: "vendor",
-          chunks: "all",
-        },
-      },
-    },
-  },
+  }
 };
 
 module.exports = webpackConfig;
