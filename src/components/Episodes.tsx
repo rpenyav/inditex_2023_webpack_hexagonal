@@ -5,7 +5,7 @@ import { RootState } from "../infrastructure/redux/root-reducer";
 import { Episode } from "../infrastructure/redux/detail";
 import { fetchEpisodes } from "../infrastructure/redux/detail";
 
-import { formatDate, formatDuration } from "../adapters/functions";
+import { formatDate, formatDuration } from "../infrastructure/helpers/functions";
 import { Link } from "react-router-dom";
 import { AppDispatch } from "../infrastructure/redux/store";
 

@@ -3,8 +3,10 @@ import { configureStore, EnhancedStore } from "@reduxjs/toolkit";
 import { MemoryRouter } from "react-router-dom"; //MemoryRouter por el useNavigate
 import { render, screen, fireEvent } from "@testing-library/react";
 import rootReducer, { RootState } from "../infrastructure/redux/root-reducer";
-import ListViewPage from "../components/ListViewPage";
+
 import React from "react";
+import ListViewPage from "../pages/ListViewPage";
+
 
 describe("Test - ListViewPage Component", () => {
   let store: EnhancedStore<RootState>;

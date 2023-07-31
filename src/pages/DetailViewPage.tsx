@@ -2,9 +2,9 @@ import React from "react";
 
 import { useParams } from "react-router-dom";
 import GlobalLayout from "../layout/GlobalLayout";
-import Episodes from "./Episodes";
+import Episodes from "../components/Episodes";
 
-import PodcasterCardDetail from "./PodcasterCardDetail";
+import PodcasterCardDetail from "../components/PodcasterCardDetail";
 
 const DetailViewPage: React.FC = () => {
   const { podcastId } = useParams<{ podcastId: string }>();

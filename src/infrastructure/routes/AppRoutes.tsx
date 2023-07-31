@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //lazy load
-const HomePageView = lazy(() => import("../../components/HomePageView"));
-const DetailViewPage = lazy(() => import("../../components/DetailViewPage"));
+const HomePageView = lazy(() => import("../../pages/HomePageView"));
+const DetailViewPage = lazy(() => import("../../pages/DetailViewPage"));
 const DetailViewEpisode = lazy(() => import("../../components/DetailViewEpisode"));
 
 const AppRoutes: React.FC = () => {
